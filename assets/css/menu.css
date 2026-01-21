@@ -47,3 +47,34 @@ body {
     background-color: #ff0000;
     font-weight: bold;
 }
+
+@media screen and (max-width: 768px){
+    .nav-container {
+        flex-direction: column;
+        align-items: start;
+        padding: 16px;
+    }
+
+
+.nav-logo img {
+    width: 100%;
+    height: auto;
+
+}
+
+.nav-menu {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.nav-item {
+    margin-top: 12px;
+    width: 100%;
+}
+
+.nav-link {
+    padding:12px;
+    width: 100%;
+}
+}
