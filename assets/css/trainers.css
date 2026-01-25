@@ -1,0 +1,118 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+.trainers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+
+.trainer-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(33.333% - 2rem); 
+    max-width: calc(33.333% - 2rem);
+    min-width: 250px;
+
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover */
+.trainer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+.trainer-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.trainer-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.trainer-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.trainer-region {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
+.trainer-badges {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+
+.trainer-status {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.status-active {
+    background-color: #2ecc71;
+}
+
+.status-retired {
+    background-color: #95a5a6;
+}
+
+.status-legendary {
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+}
+
+@media screen and (max-width: 768px) {
+    .trainer-card {
+        flex: 1 1 calc(50% - 1.5rem);
+        max-width: calc(50% - 1.5rem);
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .trainer-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .trainer-info {
+        padding: 1rem;
+    }
+}
